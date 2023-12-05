@@ -1,0 +1,13 @@
+/* LandingScreen.css */
+
+.landing-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.landing-image {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+    
