@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import PasswordInput from '../components/password';
 import EmailInput from '../components/email-input';
 import './Login.css'; // Import custom CSS
+import { Link } from 'react-router-dom';
 
 const Login = () => {
   const [password, setPassword] = useState('');
@@ -45,7 +46,10 @@ const Login = () => {
               <button type="submit" className="login-button">Login</button>
             </div>
           </form>
+          <Link to="/register">Go to register</Link>
+
         </div>
+        
         {loggedIn && (
           <div className="login-success">
             Welcome, {credentials.email}!
