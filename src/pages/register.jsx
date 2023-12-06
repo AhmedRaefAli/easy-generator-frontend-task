@@ -39,7 +39,7 @@ const Register = () => {
 
         })
         .catch((error) => {
-          console.log(error.response.data?.errors[0]||'asdas')
+          console.log(error.response.data?.errors[0])
           setErr(error.response.data.errors[0]);
           console.log(err)
         });
