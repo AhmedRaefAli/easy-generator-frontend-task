@@ -60,3 +60,11 @@ input {
   color: #28a745;
   font-weight: bold;
 }
+
+
+.err-message {
+  margin-top: 20px;
+  text-align: center;
+  color: red;
+  font-weight: bold;
+}

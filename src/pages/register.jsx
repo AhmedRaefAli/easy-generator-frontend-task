@@ -1,17 +1,19 @@
-// Register.jsx
-
 import React, { useState } from 'react';
 import PasswordInput from '../components/password';
 import EmailInput from '../components/email-input';
 import NameInput from '../components/NameInput'; // Import the reusable name input component
 import './Register.css'; // Import custom CSS
 import { Link } from 'react-router-dom';
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
     const [password, setPassword] = useState('');
     const [email, setEmail] = useState('');
     const [name, setName] = useState('');
     const [registered, setRegistered] = useState(false);
+    const [err, setErr] = useState();
+    const navigate = useNavigate();
 
     const handlePasswordChange = (e) => {
       setPassword(e.target.value);
@@ -25,10 +27,22 @@ const Register = () => {
 
   const handleRegister = (e) => {
     e.preventDefault();
-
+    console.log(name,email,password);
     // Simulate registration (replace with actual registration logic)
-    if (userData.name && userData.email && userData.password) {
-      setRegistered(true);
+    if (name && email && password) {
+      axios
+        .post("http://localhost:3000/auth/register", { name, email, password })
+        .then((response) => {
+          console.log(response);
+          setRegistered(true);
+          navigate("/login");
+
+        })
+        .catch((error) => {
+          console.log(error.response.data?.errors[0]||'asdas')
+          setErr(error.response.data.errors[0]);
+          console.log(err)
+        });
     } else {
       alert('Please fill in all fields.');
     }
@@ -37,6 +51,11 @@ const Register = () => {
   return (
     <div className="container">
       <div className="register-container">
+      {err && (
+          <div className="err-message">
+             {err}
+          </div>
+        )}
         <div className="register-form">
           <h2 className="register-title">Register</h2>
           <form onSubmit={handleRegister}>
@@ -59,12 +78,14 @@ const Register = () => {
               <button type="submit" className="register-button">Register</button>
             </div>
           </form>
-            <Link to="/login">Go to Login</Link>
+            <div className="err-message">
+              <Link to="/login">Go to Login</Link>
+            </div>
         </div>
         
         {registered && (
           <div className="register-success">
-            Registration successful for {userData.name}!
+            Registration successful for {name}!
           </div>
         )}
       </div>
