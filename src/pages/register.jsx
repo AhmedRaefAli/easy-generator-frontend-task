@@ -36,7 +36,11 @@ const Register = () => {
 
         })
         .catch((error) => {
-          setErr(error.response.data.errors[0]);
+          if(error.response.data.errors && Array.isArray(error.response.data.errors)){
+            setErr(error.response.data.errors[0]);
+          }else{
+            setErr(error.response.data.message);
+          }
         });
     } else {
       alert('Please fill in all fields.');

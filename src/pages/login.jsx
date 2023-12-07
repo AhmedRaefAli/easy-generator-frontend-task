@@ -34,7 +34,13 @@ const Login = () => {
             navigate("/landing");
           })
           .catch((error) => {
-            setErr(error.response.data.message);
+            if(error.response.data.errors && Array.isArray(error.response.data.errors)){
+              console.log(error.response.data);
+              setErr(error.response.data.errors[0]);
+            }else{
+              console.log(error.response.data);
+              setErr(error.response.data.message);
+            }
           });
       } else {
         alert('Please enter both email and password.');
