@@ -48,6 +48,11 @@ input {
   cursor: pointer;
   display: block;
   margin: 0 auto; /* Center the button */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.login-button:hover {
+  background-color: #0056b3; /* Lighter color on hover */
 }
 
 .login-success {

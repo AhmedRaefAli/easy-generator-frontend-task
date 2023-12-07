@@ -70,8 +70,9 @@ const Login = () => {
               <button type="submit" className="login-button">Login</button>
             </div>
           </form>
-          <Link to="/register">Go to register</Link>
-
+          <div className="err-message">
+            <Link to="/register">Go to register</Link>
+          </div>
         </div>
         
         {loggedIn && (

@@ -52,8 +52,12 @@ input {
   cursor: pointer;
   display: block;
   margin: 0 auto; /* Center the button */
+  transition: background-color 0.3s ease; /* Smooth transition */
 }
 
+.register-button:hover {
+  background-color: #04f73d; /* Lighter color on hover */
+}
 .register-success {
   margin-top: 20px;
   text-align: center;
