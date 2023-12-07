@@ -1,5 +1,3 @@
-// PasswordInput.jsx
-
 import React, { useState } from 'react';
 import './PasswordInput.css'; // Import the CSS file
 

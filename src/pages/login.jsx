@@ -29,13 +29,11 @@ const Login = () => {
         axios
           .post("http://localhost:3000/auth/login", {  email, password })
           .then((response) => {
-            console.log(response);
             setLoggedIn(true);
             localStorage.setItem('token', response.data.data.token);
             navigate("/landing");
           })
           .catch((error) => {
-            console.log(error.response.data.message)
             setErr(error.response.data.message);
           });
       } else {

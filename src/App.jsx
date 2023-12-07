@@ -1,12 +1,11 @@
 import './App.css';
 import Register from './pages/register';
-import React, { useState } from 'react';
+import React from 'react';
 import Login from './pages/login';
 import LandingScreen from './pages/landing';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
-  
   return (
     <Router>
       <Routes>

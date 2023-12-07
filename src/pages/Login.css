@@ -47,8 +47,8 @@ input {
   border-radius: 4px;
   cursor: pointer;
   display: block;
-  margin: 0 auto; /* Center the button */
-  transition: background-color 0.3s ease; /* Smooth transition */
+  margin: 0 auto; 
+  transition: background-color 0.3s ease;
 }
 
 .login-button:hover {

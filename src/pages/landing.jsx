@@ -1,7 +1,7 @@
 // LandingScreen.jsx
 
 import React from 'react';
-import './LandingScreen.css'; // Import custom CSS
+import './LandingScreen.css'; 
 
 const LandingScreen = () => {
   return (

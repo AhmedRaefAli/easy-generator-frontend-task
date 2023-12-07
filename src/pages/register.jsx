@@ -27,21 +27,16 @@ const Register = () => {
 
   const handleRegister = (e) => {
     e.preventDefault();
-    console.log(name,email,password);
-    // Simulate registration (replace with actual registration logic)
     if (name && email && password) {
       axios
         .post("http://localhost:3000/auth/register", { name, email, password })
         .then((response) => {
-          console.log(response);
           setRegistered(true);
           navigate("/login");
 
         })
         .catch((error) => {
-          console.log(error.response.data?.errors[0])
           setErr(error.response.data.errors[0]);
-          console.log(err)
         });
     } else {
       alert('Please fill in all fields.');

@@ -51,8 +51,8 @@ input {
   border-radius: 4px;
   cursor: pointer;
   display: block;
-  margin: 0 auto; /* Center the button */
-  transition: background-color 0.3s ease; /* Smooth transition */
+  margin: 0 auto;
+  transition: background-color 0.3s ease; 
 }
 
 .register-button:hover {
@@ -64,7 +64,6 @@ input {
   color: #28a745;
   font-weight: bold;
 }
-
 
 .err-message {
   margin-top: 20px;

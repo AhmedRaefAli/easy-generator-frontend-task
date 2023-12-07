@@ -1,5 +1,3 @@
-// NameInput.jsx
-
 import React from 'react';
 
 const NameInput = ({ label, value, onChange }) => {
