@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import PasswordInput from '../components/password';
 import EmailInput from '../components/email-input';
-import NameInput from '../components/NameInput'; // Import the reusable name input component
-import './Register.css'; // Import custom CSS
+import NameInput from '../components/NameInput'; 
+import './Register.css'; 
 import { Link } from 'react-router-dom';
 import axios from "axios";
 import { useNavigate } from "react-router-dom";

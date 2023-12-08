@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './PasswordInput.css'; // Import the CSS file
+import './PasswordInput.css'; 
 
 const PasswordInput = ({ label, value, onChange }) => {
   const [showPassword, setShowPassword] = useState(false);

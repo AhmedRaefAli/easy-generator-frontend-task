@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PasswordInput from '../components/password';
 import EmailInput from '../components/email-input';
-import './Login.css'; // Import custom CSS
+import './Login.css'; 
 import { Link } from 'react-router-dom';
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
@@ -13,7 +13,6 @@ const Login = () => {
   const [loggedIn, setLoggedIn] = useState(false);
   const [err, setErr] = useState();
 
-  // Use useHistory from react-router-dom
   const navigate = useNavigate();
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);

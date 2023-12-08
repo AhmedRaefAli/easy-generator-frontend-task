@@ -44,19 +44,19 @@ input {
 }
 
 .register-button {
-  background-color: #28a745;
+  background-color: #007bff;
   color: #fff;
   padding: 10px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   display: block;
-  margin: 0 auto;
-  transition: background-color 0.3s ease; 
+  margin: 0 auto; 
+  transition: background-color 0.3s ease;
 }
 
 .register-button:hover {
-  background-color: #04f73d; /* Lighter color on hover */
+  background-color: #0056b3; 
 }
 .register-success {
   margin-top: 20px;
