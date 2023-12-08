@@ -1,0 +1,35 @@
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+}
+
+.logo-image {
+  max-width: 50px; 
+  height: 50px;
+}
+
+
+.user-info {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.user-info span {
+  margin-right: 10px;
+}
+
+button {
+  padding: 5px 10px;
+  background-color: #e44d26;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #d2371d;
+}

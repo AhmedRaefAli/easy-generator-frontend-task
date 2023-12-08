@@ -31,14 +31,13 @@ const Login = () => {
           .then((response) => {
             setLoggedIn(true);
             localStorage.setItem('token', response.data.data.token);
+            localStorage.setItem('refreshToken', response.data.data.refreshToken);
             navigate("/landing");
           })
           .catch((error) => {
             if(error.response.data.errors && Array.isArray(error.response.data.errors)){
-              console.log(error.response.data);
               setErr(error.response.data.errors[0]);
             }else{
-              console.log(error.response.data);
               setErr(error.response.data.message);
             }
           });
