@@ -2,9 +2,12 @@
 
 .container {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   height: 100vh;
+  background-image: url('https://img.freepik.com/premium-vector/network-connection-background-abstract-style_23-2148875738.jpg?size=626&ext=jpg&ga=GA1.1.1826414947.1699920000&semt=ais'); /* Replace 'path/to/your/image.jpg' with the actual path to your background image */
+  background-size: cover;
+  background-position: center;
 }
 
 .register-container {
@@ -13,7 +16,7 @@
 
 .register-form {
   background-color: #f0f0f0;
-  padding: 20px;
+  padding: 30px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }

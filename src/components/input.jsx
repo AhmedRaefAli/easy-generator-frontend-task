@@ -1,12 +1,13 @@
 import React from 'react';
 
-const EmailInput = ({ label, value, onChange }) => {
+const Input = ({ label, value, onChange,type,name }) => {
   return (
     <div>
       <label>
         {label}:
         <input
-          type="email"
+          type={type}
+          name={name}
           value={value}
           onChange={onChange}
         />
@@ -15,4 +16,4 @@ const EmailInput = ({ label, value, onChange }) => {
   );
 };
 
-export default EmailInput;
+export default Input;

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import PasswordInput from '../components/password';
-import EmailInput from '../components/email-input';
-import NameInput from '../components/NameInput'; 
+import Input from '../components/input';
 import './Register.css'; 
 import { Link } from 'react-router-dom';
 import axios from "axios";
@@ -58,13 +57,15 @@ const Register = () => {
         <div className="register-form">
           <h2 className="register-title">Register</h2>
           <form onSubmit={handleRegister}>
-            <NameInput
-              label="Name"
+            <Input
+              label="Name" 
+              type='text'
               value={name}
               onChange={(e) => handleNameChange(e)}
             />
-            <EmailInput
-              label="Email"
+            <Input
+              label="Email" 
+              type='email'
               value={email}
               onChange={(e) => handleEmailChange(e)}
             />

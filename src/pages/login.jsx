@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PasswordInput from '../components/password';
-import EmailInput from '../components/email-input';
+import Input from '../components/input';
 import './Login.css'; 
 import { Link } from 'react-router-dom';
 import axios from "axios";
@@ -44,9 +44,7 @@ const Login = () => {
         alert('Please enter both email and password.');
       }
     };
-    
- 
-
+  
   return (
     <div className="container">
       <div className="login-container">
@@ -58,8 +56,9 @@ const Login = () => {
         <div className="login-form">
           <h2 className="login-title">Login</h2>
           <form onSubmit={handleLogin}>
-            <EmailInput
-              label="Email"
+            <Input
+              label="Email" 
+              type='email'
               value={email}
               onChange={(e) => handleEmailChange(e)}
             />
