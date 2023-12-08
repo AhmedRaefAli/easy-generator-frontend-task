@@ -1,11 +1,9 @@
-/* Register.css */
-
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-image: url('https://img.freepik.com/premium-vector/network-connection-background-abstract-style_23-2148875738.jpg?size=626&ext=jpg&ga=GA1.1.1826414947.1699920000&semt=ais'); /* Replace 'path/to/your/image.jpg' with the actual path to your background image */
+  background-image: url("https://img.freepik.com/premium-vector/network-connection-background-abstract-style_23-2148875738.jpg?size=626&ext=jpg&ga=GA1.1.1826414947.1699920000&semt=ais");
   background-size: cover;
   background-position: center;
 }
@@ -36,10 +34,11 @@ label {
 }
 
 input {
-  width: 100%;
+  width: calc(100% - 16px);
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  margin-right: 8px;
 }
 
 .text-center {
@@ -54,13 +53,14 @@ input {
   border-radius: 4px;
   cursor: pointer;
   display: block;
-  margin: 0 auto; 
+  margin: 0 auto;
   transition: background-color 0.3s ease;
 }
 
 .register-button:hover {
-  background-color: #0056b3; 
+  background-color: #0056b3;
 }
+
 .register-success {
   margin-top: 20px;
   text-align: center;
