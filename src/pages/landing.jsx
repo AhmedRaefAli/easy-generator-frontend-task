@@ -16,7 +16,7 @@ const LandingScreen = () => {
       navigate("/login");
     }
     axios.get(
-      "http://localhost:3000/auth/user",
+      "http://localhost:4000/auth/user",
       {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
@@ -36,7 +36,7 @@ const LandingScreen = () => {
   const handleLogout = (e) => {
     e.preventDefault();
      axios.post(
-            "http://localhost:3000/auth/logout",
+            "http://localhost:4000/auth/logout",
             {},
             {
               headers: {

@@ -26,7 +26,7 @@ const Login = () => {
       e.preventDefault();
       if ( email && password) {
         axios
-          .post("http://localhost:3000/auth/login", {  email, password })
+          .post("http://localhost:4000/auth/login", {  email, password })
           .then((response) => {
             setLoggedIn(true);
             localStorage.setItem('token', response.data.data.token);
